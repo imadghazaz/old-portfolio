@@ -1,0 +1,532 @@
+@import url('fonts.css');
+
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* -----------------------css variable --------------------- */
+:root{
+    --primary-color:#4458dc;
+    --primary-color2:#854fee;
+    --title-color:#141313;
+    --text-color:#777777;
+    --border-color:#201f1f17;
+    --gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+    --shadow-color:0px 10px 30px rgba(118,85,225,0.3);
+    --box-shadow:0px 10px 30px rgba(57,56,61,0.205);
+    --main-font:'Roboto',cursive;
+}
+/* -----------------------css variable --------------------- */
+
+/* -----------------------   globale   --------------------- */
+.title-text{
+    font:normal bold 50px/72px var(--main-font);
+}
+p.para{
+    font:normal 500 16px/25px var(--main-font);
+    color: var(--text-color);
+}
+.button{
+    width: 8em;
+    height: 3em;
+    font: normal 500 16px/20px var(--main-font);
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+.primary-btn,.secondary-btn:hover{
+    background-clip: padding-box;
+    background: var(--gradient-color);
+    color: whitesmoke;
+    box-shadow: var(--shadow-color);
+    transition: background 0.8s ease;
+    border: whitesmoke 2px solid;
+}
+.primary-btn:hover,.secondary-btn{
+    background-clip: padding-box;
+    background: whitesmoke;
+    color: black;
+    border: transparent;
+}
+.primary-btn::after,.secondary-btn::after{
+    position: absolute;
+    top:-2px;left: -2px;
+    bottom: -2px;right: -2px;
+    background: var(--gradient-color);
+    content: "";
+    border-radius: 4px;
+    z-index: -1;
+}
+.main-font{
+    font: var(--main-font);
+}
+.hidden{
+    transform: scale(0);
+    transition: .2s ease;
+    width: 0;
+    visibility: hidden;
+    order: 100;
+}
+.cl-white{
+    color: white;
+}
+.overflow{
+    overflow: hidden;
+}
+/* -----------------------   globale   --------------------- */
+
+
+
+/* --------------------------navbar------------------------- */
+.navbar .container-fluid .navbar-brand{
+    padding: 0 2rem 0 5rem;
+}
+.navbar .container-fluid .collapse{
+    padding: 1rem 0rem;
+}
+.navbar .container-fluid .collapse .nav-link{
+    font:normal 500 15px/2px var(--main-font);
+    text-transform: uppercase;
+    padding:1.7rem;
+    color: var(--title-color);
+}
+.navbar .container-fluid .collapse .active{
+    background: var(--gradient-color);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip: text;
+}
+.navbar .container-fluid .collapse .nav-item :hover{
+    background: var(--gradient-color);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip: text;
+}
+/* --------------------------navbar------------------------- */
+
+/* --------------------------banner------------------------- */
+.banner-container h3{
+    padding-top:35% ;
+    font-weight: 500;
+}
+.banner-container h3:after{
+    content: " ";
+    height: 2px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 5%;
+    transform: translateY(-9px);
+}
+.banner-container h1{
+    font-size: 5em;
+}
+.banner-container h4{
+    font-size: 1.5em;
+}
+.banner-wrapper{
+    background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
+}
+.banner-container img{
+    padding: 7rem 0;
+    width:90rem;
+}
+
+    
+/* --------------------------banner------------------------- */
+
+/* --------------------------about------------------------- */
+#section-1{
+    padding: 8rem 5rem;
+}
+.about-title h2 >span{
+    display: block;
+    letter-spacing: 21px;
+    position: relative;
+}
+.about-paragraphe p{
+    padding: .4rem 0;
+}
+.about-btn-wrapper{
+    position: relative;
+}
+.about-btn{
+    position: absolute;
+    right: 10%;
+}
+/* --------------------------about------------------------- */
+/* --------------------------brand------------------------- */
+#section-1-1{
+    padding: 1rem 7rem;
+    margin-bottom: 4rem;
+}
+.brandes-wrapper .row .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+.single-brande{
+    width: 180px;
+    height: 100px;
+    border: 1px solid var(--border-color);
+    margin: .8rem 0;
+    padding: 1.8rem 0;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+.single-brande >img{
+    width: 50%;
+}
+.brandes-wrapper .row .col-lg-4 :hover{
+    box-shadow: var(--shadow-color);
+    transform: scale(1.1);
+}
+.brandes-wrapper .row .col-lg-4 :hover >img{
+    filter: brightness(0.15);
+    transform: scale(1.5);
+    box-shadow: none;
+}
+.experiece-eria{
+    padding-left: 1rem;
+}
+.contact-container .experience-years span{
+    display: block;
+}
+.experiece-eria .experience-years{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0rem;
+    padding-left: 8rem;
+    width: 40rem;
+    height: 18rem;
+    position: relative;
+    z-index: -1;
+}
+.bg-banel{
+    position: absolute;
+    top: 0;left: 8rem;
+    width: 60%;
+    height: 400px; 
+    background: #e0292912;
+    z-index: 1;
+    /* margin-left: 340px; */
+}
+.years{
+    font: normal 85px/40px var(--main-font);
+    color: var(--primary-color2);
+}
+.contact-wrapper{
+    padding-left: 10rem;
+}
+.contact-wrapper a{
+    text-decoration: none;
+}
+.title-wrapper{
+    padding: 0 14rem ;
+}
+/* --------------------------brand------------------------- */
+
+/* ------------------------services------------------------ */
+.services-container{
+    padding: 7rem 2rem;
+}
+.services-container .title-wrapper h1{
+    font-size: 35px;
+}
+.services-container .service{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0.5rem;
+    margin:5rem .5rem;
+    width: 16rem;
+    transition: box-shadow .7s ease;
+    cursor: pointer;
+}
+.services-container .service:hover{
+    box-shadow: var(--box-shadow);
+}
+/* ------------------------services------------------------ */
+/* ------------------------portfolio----------------------- */
+.portfolio-container{
+    padding: 4rem 0;
+}
+.portfolio-container .folio-btn-wrapper button{
+    font: normal 700 16px/130px var(--main-font);
+    border: none;
+    background: transparent;
+    
+}
+.portfolio-container .folio-btn-wrapper button + button{
+    margin-left: 5rem;
+}
+.project .proj-img h4{
+    font:normal 700 25px/12px var(--main-font) ;
+}
+.project .proj-img img:hover{
+    filter: brightness(1.1)drop-shadow(1px 8px 30px #b1afaf);
+}
+/* ------------------------portfolio----------------------- */
+
+/* --------------------------PopUp------------------------- */
+.popUp-backgroud{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+    z-index: 1452;
+    overflow: hidden;
+}
+.PopUp-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    overflow: hidden auto;
+}
+.popUp-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    padding: 0 8px;
+    text-align: center;
+
+}
+.popup-contant-wrapper{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    text-align: left;
+    
+}
+.x-wrapper{
+    position: absolute;
+    right: 0;
+    top: -7px;
+}
+.x-wrapper button{
+    border: none;
+    background: transparent;
+    font-size: 25px;
+}
+.proj-img{
+    position: relative;
+}
+.PopUp-container .left-icon{
+    color: white;
+    height: 100%;
+    vertical-align: middle;
+    margin: auto;
+    text-align: center;
+}
+
+.PopUp-container .right-icon{
+    color: white;
+    height: 100%;
+    vertical-align: middle;
+    margin: auto;
+    text-align: center;
+}
+/* --------------------------PopUp------------------------- */
+
+/* -------------------------reviews------------------------ */
+.swiper{
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide .review-wrapper{
+    text-align: start;
+    
+}
+.swiper-slide .review-container{
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+/* -------------------------reviews------------------------ */
+
+/* ----------------------subscription---------------------- */
+.subscription-wrapper{
+    background: url(/img/subscribe-bg.png) no-repeat;
+    padding: 10rem 0;
+    margin:3rem auto;
+    margin-top: 5rem;
+}
+.subscription-wrapper .subscription-title h4{
+    font:normal 700 30px/30px var(--main-font);
+    color: whitesmoke;
+}
+.subscription-wrapper .subscription-title p{
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+.subscription-wrapper .input-textbox input{
+    width: 400px;
+    padding: 1.5rem 1rem;
+    border: 1px whitesmoke solid;
+    color: whitesmoke;
+    background: transparent;
+    font:normal 500 17px/20px var(--main-font);
+    border-radius: 25px;
+}
+.subscription-wrapper .input-textbox input::placeholder{
+    font:normal 500 17px/20px var(--main-font);
+    color: whitesmoke;
+}
+.subscription-wrapper .btn-submit {
+    height: 100%;
+}
+.subscription-wrapper .btn-submit button{
+    padding: 1rem 1rem;
+    background: whitesmoke;
+    font:normal 500 17px/20px var(--main-font);
+    color: var(--primary-color1);
+    border-radius: 25px;
+    margin-top: .5rem;
+    transition: .8s ease;
+}
+.subscription-wrapper .btn-submit button:hover{
+    color: whitesmoke;
+    background: transparent;
+    border-color: whitesmoke;
+}
+/* ----------------------subscription---------------------- */
+
+/* -------------------------footer------------------------- */
+footer{
+    padding: 5rem 0;
+    background: url(/img/footer-bg.png) no-repeat;
+}
+footer .social-media h5{
+    font:normal 500 23px/30px var(--main-font);
+}
+footer .social-media i{
+    font-size: 22px;
+    padding: 2rem;
+    color: var(--border-color);
+}
+footer .social-media a:hover >i{
+    color: var(--primary-color);
+}
+footer .copyright a{
+    text-decoration: none;
+}
+/* -------------------------footer------------------------- */
+@media screen and (max-width: 991px) and (min-width: 100px){
+    .title-wrapper {
+        padding: 0 4rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .experiece-eria{
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .services-container .service{
+        margin: 2rem auto;
+    }
+    .title-text{
+        font-size: 40px;
+    }
+    .portfolio-container .folio-btn-wrapper button + button {
+        margin-left: 1rem;
+    }
+    .project .col-lg-4{
+        padding: auto;
+    }
+    .experiece-eria .experience-years{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px){
+    .review-container {
+        width: 60%;
+        margin: auto;
+        padding: 2rem 0;
+    }
+    .swiper{
+        height: 400px;
+    }
+    .title-wrapper{
+        padding: 0 .8rem;
+    }
+    #section-1-1 {
+        padding: 1rem 1rem;
+    }
+}
+@media screen and (max-width: 430px){
+    .experiece-eria .experience-years{
+        padding-left: 0;
+        background-position-x: 0;
+    }
+    .proj-img img{
+        width: 100%;
+    }
+    #proj-img{
+        padding: 0;
+    }
+    .title-text {
+        font-size: 7vw;
+    }
+    .about-title h2 >span {
+        letter-spacing: 4.8vw;
+    }
+    .service{        
+        width: 100%;
+        font-size: 4.8vw;       
+    }
+    .services-container{
+        padding: 0;
+    }
+    .contact-wrapper {
+        padding-left: 7vw;
+        font-size: 5vw;
+    }
+    .bg-banel{
+        left: 8vw;
+        width: 90%;
+    }
+    .years-description{
+        font-size: 7vw;
+    }
+    .years{
+        font-size: 25vw;
+    }
+    .services-container .title-wrapper h1 {
+        font-size: 10vw;
+    }
+    p .para{
+        font-size: 4vw;
+    }
+    .portfolio-container .folio-btn-wrapper button + button {
+        margin-left: 0;
+    }
+    .portfolio-container .folio-btn-wrapper button{
+        font: normal 700 16px/37px var(--main-font);
+    }
+    .subscription-wrapper .input-textbox input{
+        width: auto;
+
+    }
+    #section-1{
+        padding: 0;
+        padding-bottom: 5rem;
+    }
+    .services-container .service{
+        width: 100%;
+    }
+}
+
+
+
